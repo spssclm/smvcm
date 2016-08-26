@@ -1,0 +1,5 @@
+新建maven项目
+配置maven项目
+向maven项目添加jar包(pom.xml)
+搭建spring mvc(web.xml,spring-mvc.xml,controller,jsp一个简单的测试类——一个方法做地址映射，并向页面传递一个数据)
+---第一阶段任务完成---
