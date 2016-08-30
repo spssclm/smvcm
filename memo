@@ -3,3 +3,10 @@
 向maven项目添加jar包(pom.xml)
 搭建spring mvc(web.xml,spring-mvc.xml,controller,jsp一个简单的测试类——一个方法做地址映射，并向页面传递一个数据)
 ---第一阶段任务完成---
+整合SpringMVC并用jetty测试通过
+	1、spring-mvc.xml(jetty启动不了是因为它会检查spring-mvc里的配置是否正常)
+	2、web.xml(Spring view分发器的路径不能是*.do,要改为/,不然页面会返回不了数据)
+	3、log4j.properties
+	4、添加model和controller(可用自动生成器生成 generator-mybatis)
+	5、jetty测试（jetty的jetty-maven-plugin只能用1.7) http://localhost:8080/user/test?id=1
+---第二阶段任务完成---
