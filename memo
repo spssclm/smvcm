@@ -10,3 +10,13 @@
 	4、添加model和controller(可用自动生成器生成 generator-mybatis)
 	5、jetty测试（jetty的jetty-maven-plugin只能用1.7) http://localhost:8080/user/test?id=1
 ---第二阶段任务完成---
+Spring与MyBatis的整合并用junit测试通过
+	1、配置web.xml(加Spring和mybatis的配置文件)
+	2、加jdbc.properties
+	3、配置pom.xml(加mybatis\mybatis-spring\mysql-connector-java\commons-dbcp\spring-jdbc)
+	4、添加dao IUseDao,添加mapper UserMapper.xml (model User在上次已加过)
+	5、添加service IUserService
+	6、添加service的实现 UserServiceImpl
+	7、junit(jdk1.7)测试
+	junit测试通过
+---第三阶段任务完成---

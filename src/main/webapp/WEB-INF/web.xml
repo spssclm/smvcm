@@ -19,6 +19,22 @@
     <listener>  
         <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>  
     </listener>  
+    
+    <!-- Spring监听器 -->  
+    <listener>  
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>  
+    </listener>
+    
+    <!-- 防止Spring内存溢出监听器 -->  
+    <listener>  
+        <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>  
+    </listener>
+    
+    <!-- Spring和mybatis的配置文件 -->  
+    <context-param>  
+        <param-name>contextConfigLocation</param-name>  
+        <param-value>classpath:spring-mybatis.xml</param-value>  
+    </context-param>
   
     <!-- 字符集 过滤器  -->  
     <filter>  
