@@ -20,3 +20,5 @@ Spring与MyBatis的整合并用junit测试通过
 	7、junit(jdk1.7)测试
 	junit测试通过
 ---第三阶段任务完成---
+扩充UserController类加测试
+连抄带画的总算把这个项目完成了。
