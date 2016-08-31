@@ -1,10 +1,13 @@
 package com.cloudcross.anon.controller;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -16,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.cloudcross.anon.model.User;
 import com.cloudcross.anon.service.IUserService;
@@ -101,5 +105,17 @@ public class UserController {
 		return new ResponseEntity<User>(user,HttpStatus.OK);
 	}
 	
+	@RequestMapping(value="/upload")
+	public String showUploadpage(){
+		return "file";
+	}
 	
+	@RequestMapping(value="/doUpload",method=RequestMethod.POST)
+	public String doUploadFile(@RequestParam("file")MultipartFile file) throws IOException{
+		if(!file.isEmpty()){
+			log.info("Process file:{}",file.getOriginalFilename());
+		}
+		FileUtils.copyInputStreamToFile(file.getInputStream(), new File("F:\\",System.currentTimeMillis()+file.getOriginalFilename()));
+		return "succ";
+	}
 }

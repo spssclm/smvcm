@@ -22,3 +22,6 @@ Spring与MyBatis的整合并用junit测试通过
 ---第三阶段任务完成---
 扩充UserController类加测试
 连抄带画的总算把这个项目完成了。
+---自由发挥阶段---
+实现文件上传功能(file.jsp的form action路径定义错误导致应该为doUpload不应该是/user/doUpload)
+
